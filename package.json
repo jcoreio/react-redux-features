@@ -90,7 +90,7 @@
     "jsdom": "^9.8.0",
     "jsdom-global": "^2.1.0",
     "lodash.sortby": "^4.7.0",
-    "mocha": "^3.2.0",
+    "mocha": "^4.0.1",
     "nyc": "^11.0.2",
     "react": "^15.3.2",
     "react-addons-test-utils": "^15.3.2",
