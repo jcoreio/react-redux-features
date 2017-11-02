@@ -102,7 +102,7 @@
     "redux-features": "^2.0.0",
     "rimraf": "^2.5.4",
     "semantic-release": "^7.0.1",
-    "sinon": "^2.0.0",
+    "sinon": "^4.1.0",
     "validate-commit-msg": "^2.8.2"
   },
   "peerDependencies": {
