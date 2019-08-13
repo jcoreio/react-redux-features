@@ -76,8 +76,9 @@ export default function featureLoader<S, A, P: Object>(
 
   class FeatureLoader extends React.Component<P> {
     static defaultProps: MergedProps
-    componentWillMount() {
-      const { featureState, dispatch } = this.props
+    constructor(props: P) {
+      super(props)
+      const { featureState, dispatch } = props
       if (featureState === 'NOT_LOADED') dispatch(loadFeature(featureId))
     }
     render(): React.Node {
