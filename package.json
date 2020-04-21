@@ -159,6 +159,7 @@
     "@babel/runtime": "^7.1.5",
     "lodash": "^4.17.10",
     "prop-types": "^15.6.0",
+    "react-is": "^16.13.1",
     "reselect": "^3.0.0"
   },
   "peerDependencies": {

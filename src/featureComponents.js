@@ -1,6 +1,7 @@
 /* @flow */
 
 import * as React from 'react'
+import { isValidElementType } from 'react-is'
 import { defaults } from 'lodash'
 import type { Feature, Features } from 'redux-features'
 import { connect } from 'react-redux'
@@ -54,12 +55,14 @@ export default function featureComponents<S, A, P: Object>(
           index: number
         ) => {
           const key = featureIndex + ':' + index
-          if (React.isValidElement(Comp))
+          if (React.isValidElement(Comp)) {
             renderedComponents.push(
               React.cloneElement((Comp: any), { ...props, key })
             )
-          else if (typeof Comp === 'function')
-            renderedComponents.push(<Comp {...props} key={key} />)
+          } else if (isValidElementType(Comp)) {
+            const FeatureComponent: any = Comp
+            renderedComponents.push(<FeatureComponent {...props} key={key} />)
+          }
         }
       )
     })
