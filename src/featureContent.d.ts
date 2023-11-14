@@ -18,6 +18,6 @@ export default function featureContent<
   options: Options<S, A>
 ): React.ComponentType<
   P & {
-    children: (content: Array<any>) => React.ReactElement | null | undefined
+    children?: (content: Array<any>) => React.ReactElement | null | undefined
   }
 >
