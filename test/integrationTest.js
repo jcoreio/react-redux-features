@@ -27,6 +27,7 @@ describe('integration test', () => {
         combineReducers({
           features: featuresReducer(),
           featureStates: featureStatesReducer(),
+          count: (state) => state ?? 0,
         }),
         featureReducersReducer()
       )
@@ -49,10 +50,11 @@ describe('integration test', () => {
       const counter = {
         load: (store) =>
           Promise.resolve({
-            reducer: (state, action) =>
-              action.type === 'INCREMENT'
+            reducer: (state, action) => {
+              return action.type === 'INCREMENT'
                 ? { ...state, count: (state.count || 0) + 1 }
-                : state,
+                : state
+            },
             Counter: connect(({ count }) => ({ count }))(({ count }) => (
               <div>{`Counter: ${count || 0}`}</div>
             )),
@@ -91,6 +93,7 @@ describe('integration test', () => {
         combineReducers({
           features: featuresReducer(),
           featureStates: featureStatesReducer(),
+          count: (state) => state ?? 0,
         }),
         featureReducersReducer()
       )
@@ -153,6 +156,7 @@ describe('integration test', () => {
       expect(comp.update().text()).to.equal('Counter: 0')
 
       store.dispatch({ type: 'INCREMENT' })
+      await new Promise((resolve) => setTimeout(resolve, 17))
       expect(comp.update().text()).to.equal('Counter: 1')
     })
   })

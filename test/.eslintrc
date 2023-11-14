@@ -1,5 +1,6 @@
 {
   "env": {
-    "mocha": true
+    "mocha": true,
+    "shared-node-browser": true
   }
 }
