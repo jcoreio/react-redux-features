@@ -27,20 +27,11 @@ declare module 'lodash' {
     *
   >
 
-  declare type __CurriedFunction4<
-    A,
-    B,
-    C,
-    D,
-    R,
-    AA: A,
-    BB: B,
-    CC: C,
-    DD: D
-  > = ((...r: [AA]) => CurriedFunction3<BB, CC, DD, R>) &
-    ((...r: [AA, BB]) => CurriedFunction2<CC, DD, R>) &
-    ((...r: [AA, BB, CC]) => CurriedFunction1<DD, R>) &
-    ((...r: [AA, BB, CC, DD]) => R)
+  declare type __CurriedFunction4<A, B, C, D, R, AA: A, BB: B, CC: C, DD: D> =
+    ((...r: [AA]) => CurriedFunction3<BB, CC, DD, R>) &
+      ((...r: [AA, BB]) => CurriedFunction2<CC, DD, R>) &
+      ((...r: [AA, BB, CC]) => CurriedFunction1<DD, R>) &
+      ((...r: [AA, BB, CC, DD]) => R)
   declare type CurriedFunction4<A, B, C, D, R> = __CurriedFunction4<
     A,
     B,
@@ -1478,20 +1469,11 @@ declare module 'lodash/fp' {
     *
   >
 
-  declare type __CurriedFunction4<
-    A,
-    B,
-    C,
-    D,
-    R,
-    AA: A,
-    BB: B,
-    CC: C,
-    DD: D
-  > = ((...r: [AA]) => CurriedFunction3<BB, CC, DD, R>) &
-    ((...r: [AA, BB]) => CurriedFunction2<CC, DD, R>) &
-    ((...r: [AA, BB, CC]) => CurriedFunction1<DD, R>) &
-    ((...r: [AA, BB, CC, DD]) => R)
+  declare type __CurriedFunction4<A, B, C, D, R, AA: A, BB: B, CC: C, DD: D> =
+    ((...r: [AA]) => CurriedFunction3<BB, CC, DD, R>) &
+      ((...r: [AA, BB]) => CurriedFunction2<CC, DD, R>) &
+      ((...r: [AA, BB, CC]) => CurriedFunction1<DD, R>) &
+      ((...r: [AA, BB, CC, DD]) => R)
   declare type CurriedFunction4<A, B, C, D, R> = __CurriedFunction4<
     A,
     B,
@@ -2150,9 +2132,9 @@ declare module 'lodash/fp' {
     ): Array<T>;
     groupBy<V, T>(
       iteratee: ValueOnlyIteratee<T>
-    ): (
-      collection: $ReadOnlyArray<T> | { [id: any]: T }
-    ) => { [key: V]: Array<T> };
+    ): (collection: $ReadOnlyArray<T> | { [id: any]: T }) => {
+      [key: V]: Array<T>,
+    };
     groupBy<V, T>(
       iteratee: ValueOnlyIteratee<T>,
       collection: $ReadOnlyArray<T> | { [id: any]: T }
@@ -2381,7 +2363,7 @@ declare module 'lodash/fp' {
     spreadFrom(start: number, func: Function): Function;
     throttle<A, R>(wait: number): (func: (...A) => R) => (...A) => R;
     throttle<A, R>(wait: number, func: (...A) => R): (...A) => R;
-    unary<T, R>(func: (T, ...any[]) => R): T => R;
+    unary<T, R>(func: (T, ...any[]) => R): (T) => R;
     wrap(wrapper: Function): (value: any) => Function;
     wrap(wrapper: Function, value: any): Function;
 

@@ -113,8 +113,8 @@ import sortBy from 'lodash.sortby'
 import { featureComponents } from 'react-redux-features'
 
 const UserViewSubpanels = featureComponents({
-  sortFeatures: features => sortBy(features, 'indexInUserView'),
-  getComponents: feature => feature.UserViewSubpanels,
+  sortFeatures: (features) => sortBy(features, 'indexInUserView'),
+  getComponents: (feature) => feature.UserViewSubpanels,
 })
 const UserView = ({ user }) => (
   <div>

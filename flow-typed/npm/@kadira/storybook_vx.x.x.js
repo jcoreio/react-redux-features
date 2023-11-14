@@ -166,62 +166,40 @@ declare module '@kadira/storybook/dist/client/index.js' {
   declare module.exports: $Exports<'@kadira/storybook/dist/client/index'>
 }
 declare module '@kadira/storybook/dist/client/manager/index.js' {
-  declare module.exports: $Exports<
-    '@kadira/storybook/dist/client/manager/index'
-  >
+  declare module.exports: $Exports<'@kadira/storybook/dist/client/manager/index'>
 }
 declare module '@kadira/storybook/dist/client/manager/preview.js' {
-  declare module.exports: $Exports<
-    '@kadira/storybook/dist/client/manager/preview'
-  >
+  declare module.exports: $Exports<'@kadira/storybook/dist/client/manager/preview'>
 }
 declare module '@kadira/storybook/dist/client/manager/provider.js' {
-  declare module.exports: $Exports<
-    '@kadira/storybook/dist/client/manager/provider'
-  >
+  declare module.exports: $Exports<'@kadira/storybook/dist/client/manager/provider'>
 }
 declare module '@kadira/storybook/dist/client/preview/actions.js' {
-  declare module.exports: $Exports<
-    '@kadira/storybook/dist/client/preview/actions'
-  >
+  declare module.exports: $Exports<'@kadira/storybook/dist/client/preview/actions'>
 }
 declare module '@kadira/storybook/dist/client/preview/client_api.js' {
-  declare module.exports: $Exports<
-    '@kadira/storybook/dist/client/preview/client_api'
-  >
+  declare module.exports: $Exports<'@kadira/storybook/dist/client/preview/client_api'>
 }
 declare module '@kadira/storybook/dist/client/preview/config_api.js' {
-  declare module.exports: $Exports<
-    '@kadira/storybook/dist/client/preview/config_api'
-  >
+  declare module.exports: $Exports<'@kadira/storybook/dist/client/preview/config_api'>
 }
 declare module '@kadira/storybook/dist/client/preview/error_display.js' {
-  declare module.exports: $Exports<
-    '@kadira/storybook/dist/client/preview/error_display'
-  >
+  declare module.exports: $Exports<'@kadira/storybook/dist/client/preview/error_display'>
 }
 declare module '@kadira/storybook/dist/client/preview/index.js' {
-  declare module.exports: $Exports<
-    '@kadira/storybook/dist/client/preview/index'
-  >
+  declare module.exports: $Exports<'@kadira/storybook/dist/client/preview/index'>
 }
 declare module '@kadira/storybook/dist/client/preview/init.js' {
   declare module.exports: $Exports<'@kadira/storybook/dist/client/preview/init'>
 }
 declare module '@kadira/storybook/dist/client/preview/reducer.js' {
-  declare module.exports: $Exports<
-    '@kadira/storybook/dist/client/preview/reducer'
-  >
+  declare module.exports: $Exports<'@kadira/storybook/dist/client/preview/reducer'>
 }
 declare module '@kadira/storybook/dist/client/preview/render.js' {
-  declare module.exports: $Exports<
-    '@kadira/storybook/dist/client/preview/render'
-  >
+  declare module.exports: $Exports<'@kadira/storybook/dist/client/preview/render'>
 }
 declare module '@kadira/storybook/dist/client/preview/story_store.js' {
-  declare module.exports: $Exports<
-    '@kadira/storybook/dist/client/preview/story_store'
-  >
+  declare module.exports: $Exports<'@kadira/storybook/dist/client/preview/story_store'>
 }
 declare module '@kadira/storybook/dist/server/addons.js' {
   declare module.exports: $Exports<'@kadira/storybook/dist/server/addons'>
@@ -239,42 +217,28 @@ declare module '@kadira/storybook/dist/server/config/babel.js' {
   declare module.exports: $Exports<'@kadira/storybook/dist/server/config/babel'>
 }
 declare module '@kadira/storybook/dist/server/config/babel.prod.js' {
-  declare module.exports: $Exports<
-    '@kadira/storybook/dist/server/config/babel.prod'
-  >
+  declare module.exports: $Exports<'@kadira/storybook/dist/server/config/babel.prod'>
 }
 declare module '@kadira/storybook/dist/server/config/defaults/webpack.config.js' {
-  declare module.exports: $Exports<
-    '@kadira/storybook/dist/server/config/defaults/webpack.config'
-  >
+  declare module.exports: $Exports<'@kadira/storybook/dist/server/config/defaults/webpack.config'>
 }
 declare module '@kadira/storybook/dist/server/config/globals.js' {
-  declare module.exports: $Exports<
-    '@kadira/storybook/dist/server/config/globals'
-  >
+  declare module.exports: $Exports<'@kadira/storybook/dist/server/config/globals'>
 }
 declare module '@kadira/storybook/dist/server/config/polyfills.js' {
-  declare module.exports: $Exports<
-    '@kadira/storybook/dist/server/config/polyfills'
-  >
+  declare module.exports: $Exports<'@kadira/storybook/dist/server/config/polyfills'>
 }
 declare module '@kadira/storybook/dist/server/config/utils.js' {
   declare module.exports: $Exports<'@kadira/storybook/dist/server/config/utils'>
 }
 declare module '@kadira/storybook/dist/server/config/WatchMissingNodeModulesPlugin.js' {
-  declare module.exports: $Exports<
-    '@kadira/storybook/dist/server/config/WatchMissingNodeModulesPlugin'
-  >
+  declare module.exports: $Exports<'@kadira/storybook/dist/server/config/WatchMissingNodeModulesPlugin'>
 }
 declare module '@kadira/storybook/dist/server/config/webpack.config.js' {
-  declare module.exports: $Exports<
-    '@kadira/storybook/dist/server/config/webpack.config'
-  >
+  declare module.exports: $Exports<'@kadira/storybook/dist/server/config/webpack.config'>
 }
 declare module '@kadira/storybook/dist/server/config/webpack.config.prod.js' {
-  declare module.exports: $Exports<
-    '@kadira/storybook/dist/server/config/webpack.config.prod'
-  >
+  declare module.exports: $Exports<'@kadira/storybook/dist/server/config/webpack.config.prod'>
 }
 declare module '@kadira/storybook/dist/server/iframe.html.js' {
   declare module.exports: $Exports<'@kadira/storybook/dist/server/iframe.html'>

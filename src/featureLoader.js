@@ -46,8 +46,8 @@ export default function featureLoader<S, A, P: Object>(
     {},
     options,
     {
-      getFeatures: state => (state ? state.features : undefined),
-      getFeatureStates: state => (state ? state.featureStates : undefined),
+      getFeatures: (state) => (state ? state.features : undefined),
+      getFeatureStates: (state) => (state ? state.featureStates : undefined),
     }
   )
   const mapStateToProps: (state: S) => PropsFromState = createSelector(
@@ -86,9 +86,5 @@ export default function featureLoader<S, A, P: Object>(
     }
   }
 
-  return connect(
-    mapStateToProps,
-    null,
-    mergeProps
-  )(FeatureLoader)
+  return connect(mapStateToProps, null, mergeProps)(FeatureLoader)
 }

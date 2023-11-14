@@ -17,7 +17,7 @@ describe('featureLoader', () => {
       render: () => null,
     })
 
-    const reducer = sinon.spy(state => state)
+    const reducer = sinon.spy((state) => state)
 
     const store = createStore(reducer)
 
@@ -36,7 +36,7 @@ describe('featureLoader', () => {
       render: () => null,
     })
 
-    const reducer = sinon.spy(state => state)
+    const reducer = sinon.spy((state) => state)
 
     const store = createStore(reducer, {
       featureStates: {
@@ -58,7 +58,7 @@ describe('featureLoader', () => {
       render: () => null,
     })
 
-    const reducer = sinon.spy(state => state)
+    const reducer = sinon.spy((state) => state)
 
     const store = createStore(reducer, {
       featureStates: {},
@@ -79,7 +79,7 @@ describe('featureLoader', () => {
       render: () => null,
     })
 
-    const reducer = sinon.spy(state => state)
+    const reducer = sinon.spy((state) => state)
 
     for (let featureState of ['LOADING', 'LOADED', new Error('test')]) {
       const store = createStore(reducer, {
@@ -99,7 +99,7 @@ describe('featureLoader', () => {
     }
   })
   it('behaves when render is not given', () => {
-    const reducer = state => state
+    const reducer = (state) => state
     const feature = {
       hello: 'world',
     }
@@ -135,7 +135,7 @@ describe('featureLoader', () => {
     }
   })
   it('calls render with feature, featureState, and props', () => {
-    const reducer = state => state
+    const reducer = (state) => state
     const feature = {
       hello: 'world',
     }
@@ -183,7 +183,7 @@ describe('featureLoader', () => {
     }
   })
   it('supports custom getFeatures and getFeatureStates', () => {
-    const reducer = state => state
+    const reducer = (state) => state
     const feature = {
       hello: 'world',
     }
@@ -198,8 +198,8 @@ describe('featureLoader', () => {
       const Comp = featureLoader({
         featureId: 'test',
         render,
-        getFeatureStates: state => state.featureStatage,
-        getFeatures: state => state.featureness,
+        getFeatureStates: (state) => state.featureStatage,
+        getFeatures: (state) => state.featureness,
       })
 
       const store = createStore(reducer, {

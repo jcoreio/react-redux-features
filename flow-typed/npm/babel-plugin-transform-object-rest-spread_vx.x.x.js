@@ -28,7 +28,5 @@ declare module 'babel-plugin-transform-object-rest-spread/lib/index' {
 
 // Filename aliases
 declare module 'babel-plugin-transform-object-rest-spread/lib/index.js' {
-  declare module.exports: $Exports<
-    'babel-plugin-transform-object-rest-spread/lib/index'
-  >
+  declare module.exports: $Exports<'babel-plugin-transform-object-rest-spread/lib/index'>
 }

@@ -4,9 +4,6 @@ import { renderToString } from 'react-dom/server'
 import { combineReducers, createStore, applyMiddleware } from 'redux'
 import { connect, Provider } from 'react-redux'
 import { mount } from 'enzyme'
-import { configure as configureEnzyme } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
-configureEnzyme({ adapter: new Adapter() })
 import { expect } from 'chai'
 import {
   composeReducers,
@@ -39,7 +36,7 @@ describe('integration test', () => {
       const store = createStore(
         reducer,
         applyMiddleware(
-          store => next => action => {
+          (store) => (next) => (action) => {
             const result = next(action)
             if (action.type === LOAD_FEATURE) featurePromises.push(result)
             return result
@@ -50,7 +47,7 @@ describe('integration test', () => {
       )
 
       const counter = {
-        load: store =>
+        load: (store) =>
           Promise.resolve({
             reducer: (state, action) =>
               action.type === 'INCREMENT'
@@ -108,7 +105,7 @@ describe('integration test', () => {
           },
         },
         applyMiddleware(
-          store => next => action => {
+          (store) => (next) => (action) => {
             const result = next(action)
             if (action.type === LOAD_FEATURE) featurePromises.push(result)
             return result
@@ -119,7 +116,7 @@ describe('integration test', () => {
       )
 
       const counter = {
-        load: store =>
+        load: (store) =>
           Promise.resolve({
             reducer: (state, action) =>
               action.type === 'INCREMENT'
@@ -153,14 +150,14 @@ describe('integration test', () => {
       const comp = mount(app)
       store.dispatch(loadInitialFeatures())
       await Promise.all(featurePromises)
-      expect(comp.text()).to.equal('Counter: 0')
+      expect(comp.update().text()).to.equal('Counter: 0')
 
       store.dispatch({ type: 'INCREMENT' })
-      expect(comp.text()).to.equal('Counter: 1')
+      expect(comp.update().text()).to.equal('Counter: 1')
     })
   })
   describe('featureComponents', () => {
-    it('client-side rendering works', async function() {
+    it('client-side rendering works', async function () {
       const reducer = combineReducers({
         features: featuresReducer(),
         featureStates: featureStatesReducer(),
@@ -182,8 +179,8 @@ describe('integration test', () => {
       store.dispatch(addFeature('ghosts', {}))
 
       const Animals = featureComponents({
-        getComponents: feature => feature.animals,
-        sortFeatures: features => sortBy(features, 'index'),
+        getComponents: (feature) => feature.animals,
+        sortFeatures: (features) => sortBy(features, 'index'),
       })
 
       const app = (
@@ -199,7 +196,7 @@ describe('integration test', () => {
       const app2 = (
         <Provider store={store}>
           <Animals adjective="big">
-            {animals => (
+            {(animals) => (
               <div>
                 Bear
                 {animals}
@@ -214,7 +211,7 @@ describe('integration test', () => {
     })
   })
   describe('featureContent', () => {
-    it('works with react-router', async function() {
+    it('works with react-router', async function () {
       const reducer = combineReducers({
         features: featuresReducer(),
         featureStates: featureStatesReducer(),
@@ -223,13 +220,13 @@ describe('integration test', () => {
       const store = createStore(reducer)
 
       const RootRoutes = featureContent({
-        getContent: feature => feature.rootRoutes,
+        getContent: (feature) => feature.rootRoutes,
       })
       const UserViewRoutes = featureContent({
-        getContent: feature => feature.userViewRoutes,
+        getContent: (feature) => feature.userViewRoutes,
       })
 
-      const UserView = props => (
+      const UserView = (props) => (
         <div>
           <h1>User {props.match.params.userId}</h1>
           <UserViewRoutes {...props} />
@@ -275,9 +272,9 @@ describe('integration test', () => {
         <Provider store={store}>
           <Router history={history}>
             <Route
-              render={props => (
+              render={(props) => (
                 <RootRoutes {...props}>
-                  {routes => <Switch>{routes}</Switch>}
+                  {(routes) => <Switch>{routes}</Switch>}
                 </RootRoutes>
               )}
             />

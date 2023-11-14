@@ -28,7 +28,5 @@ declare module 'babel-plugin-transform-export-extensions/lib/index' {
 
 // Filename aliases
 declare module 'babel-plugin-transform-export-extensions/lib/index.js' {
-  declare module.exports: $Exports<
-    'babel-plugin-transform-export-extensions/lib/index'
-  >
+  declare module.exports: $Exports<'babel-plugin-transform-export-extensions/lib/index'>
 }

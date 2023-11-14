@@ -18,22 +18,18 @@ export default function featureContent<S, A, P: Object>(
   P & { children: (content: Array<any>) => ?React.Element<any> }
 > {
   const { getFeatures, sortFeatures, getContent } = defaults({}, options, {
-    getFeatures: state => (state ? state.features : {}),
-    sortFeatures: features => Object.values(features),
+    getFeatures: (state) => (state ? state.features : {}),
+    sortFeatures: (features) => Object.values(features),
   })
 
   type PropsFromState = {
     features: Array<Feature<S, A>>,
   }
 
-  const mapStateToProps: (
-    state: S
-  ) => PropsFromState = createStructuredSelector({
-    features: createSelector(
-      getFeatures,
-      sortFeatures
-    ),
-  })
+  const mapStateToProps: (state: S) => PropsFromState =
+    createStructuredSelector({
+      features: createSelector(getFeatures, sortFeatures),
+    })
 
   function mergeProps(
     { features }: PropsFromState,
@@ -66,9 +62,5 @@ export default function featureContent<S, A, P: Object>(
 
   const FeatureContent = ({ children }) => children
 
-  return connect(
-    mapStateToProps,
-    null,
-    mergeProps
-  )(FeatureContent)
+  return connect(mapStateToProps, null, mergeProps)(FeatureContent)
 }

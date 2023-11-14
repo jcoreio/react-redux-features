@@ -202,10 +202,12 @@ declare module 'react-redux' {
   // Typings for Provider
   // ------------------------------------------------------------
 
-  declare export class Provider<Store> extends React$Component<{
-    store: Store,
-    children?: React$Node,
-  }> {}
+  declare export class Provider<Store>
+    extends
+      React$Component<{
+        store: Store,
+        children?: React$Node,
+      }> {}
 
   declare export function createProvider(
     storeKey?: string,

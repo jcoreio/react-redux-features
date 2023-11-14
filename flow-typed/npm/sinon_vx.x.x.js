@@ -315,33 +315,25 @@ declare module 'sinon/lib/sinon/util/core/function-name.js' {
   declare module.exports: $Exports<'sinon/lib/sinon/util/core/function-name'>
 }
 declare module 'sinon/lib/sinon/util/core/function-to-string.js' {
-  declare module.exports: $Exports<
-    'sinon/lib/sinon/util/core/function-to-string'
-  >
+  declare module.exports: $Exports<'sinon/lib/sinon/util/core/function-to-string'>
 }
 declare module 'sinon/lib/sinon/util/core/get-config.js' {
   declare module.exports: $Exports<'sinon/lib/sinon/util/core/get-config'>
 }
 declare module 'sinon/lib/sinon/util/core/get-property-descriptor.js' {
-  declare module.exports: $Exports<
-    'sinon/lib/sinon/util/core/get-property-descriptor'
-  >
+  declare module.exports: $Exports<'sinon/lib/sinon/util/core/get-property-descriptor'>
 }
 declare module 'sinon/lib/sinon/util/core/index.js' {
   declare module.exports: $Exports<'sinon/lib/sinon/util/core/index'>
 }
 declare module 'sinon/lib/sinon/util/core/iterable-to-string.js' {
-  declare module.exports: $Exports<
-    'sinon/lib/sinon/util/core/iterable-to-string'
-  >
+  declare module.exports: $Exports<'sinon/lib/sinon/util/core/iterable-to-string'>
 }
 declare module 'sinon/lib/sinon/util/core/log_error.js' {
   declare module.exports: $Exports<'sinon/lib/sinon/util/core/log_error'>
 }
 declare module 'sinon/lib/sinon/util/core/order-by-first-call.js' {
-  declare module.exports: $Exports<
-    'sinon/lib/sinon/util/core/order-by-first-call'
-  >
+  declare module.exports: $Exports<'sinon/lib/sinon/util/core/order-by-first-call'>
 }
 declare module 'sinon/lib/sinon/util/core/restore.js' {
   declare module.exports: $Exports<'sinon/lib/sinon/util/core/restore'>
@@ -365,9 +357,7 @@ declare module 'sinon/lib/sinon/util/event.js' {
   declare module.exports: $Exports<'sinon/lib/sinon/util/event'>
 }
 declare module 'sinon/lib/sinon/util/fake_server_with_clock.js' {
-  declare module.exports: $Exports<
-    'sinon/lib/sinon/util/fake_server_with_clock'
-  >
+  declare module.exports: $Exports<'sinon/lib/sinon/util/fake_server_with_clock'>
 }
 declare module 'sinon/lib/sinon/util/fake_server.js' {
   declare module.exports: $Exports<'sinon/lib/sinon/util/fake_server'>
